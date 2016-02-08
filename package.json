@@ -1,0 +1,27 @@
+{
+  "name": "json-to-ldp",
+  "version": "0.1.0",
+  "description": "Navigate JSON in a Linked Data Platform fashion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicola/json-to-ldp"
+  },
+  "keywords": [
+    "ldp",
+    "jsonpointer",
+    "json"
+  ],
+  "author": "Nicola Greco <me@nicola.io> (http://nicolagreco.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicola/json-to-ldp/issues"
+  },
+  "homepage": "https://github.com/nicola/json-to-ldp",
+  "dependencies": {
+    "jsonpointer": "^3.0.0"
+  }
+}
