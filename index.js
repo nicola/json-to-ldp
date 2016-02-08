@@ -8,11 +8,14 @@ function isLeaf (resource) {
 }
 
 function toLdp (json, depth) {
-  if (!depth) depth = 1
+  if (!json) {
+    return null
+  }
 
+  if (!depth) depth = 1
   var preds = {'contains': []}
 
-  Object.keys(json).sort()
+  Object.keys(json)
     .forEach(function (resource) {
       // never skip @ properties
       if (resource.substr(0, 1) === '@') {
