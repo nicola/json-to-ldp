@@ -1,6 +1,6 @@
 {
   "name": "json-to-ldp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Navigate JSON in a Linked Data Platform fashion",
   "main": "index.js",
   "scripts": {
