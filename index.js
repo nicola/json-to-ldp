@@ -7,9 +7,12 @@ function isLeaf (resource) {
   return ['string', 'number'].indexOf(typeof resource) > -1
 }
 
-function toLdp (json, depth) {
+function toLdp (json, depth, pointers) {
   if (!json) {
     return null
+  }
+  if (isLeaf(json)) {
+    return pointers ? json : null
   }
 
   if (!depth) depth = 1
@@ -48,5 +51,6 @@ function toLdp (json, depth) {
 
 function traverse (json, path, depth) {
   if (path === '/') path = ''
-  return toLdp(jsonpointer.get(json, path), depth)
+  var content = toLdp(jsonpointer.get(json, path), depth)
+  return content
 }
